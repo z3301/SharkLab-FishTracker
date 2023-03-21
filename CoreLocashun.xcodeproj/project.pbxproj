@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370AAF2329C4FCDF00704074 /* Helvetica.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 370AAF2229C4FCDF00704074 /* Helvetica.ttc */; };
 		37794C4129C38F8D00B23E8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37794C4029C38F8D00B23E8A /* AppDelegate.swift */; };
 		37794C4329C38F8D00B23E8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37794C4229C38F8D00B23E8A /* SceneDelegate.swift */; };
 		37794C4529C38F8D00B23E8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37794C4429C38F8D00B23E8A /* ViewController.swift */; };
 		37794C4829C38F8D00B23E8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37794C4629C38F8D00B23E8A /* Main.storyboard */; };
 		37794C4A29C38F8F00B23E8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37794C4929C38F8F00B23E8A /* Assets.xcassets */; };
 		37794C4D29C38F8F00B23E8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37794C4B29C38F8F00B23E8A /* LaunchScreen.storyboard */; };
+		37794C5629C490BF00B23E8A /* CSV in Frameworks */ = {isa = PBXBuildFile; productRef = 37794C5529C490BF00B23E8A /* CSV */; };
+		37A2627729C92B49006E85F1 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2627529C92B49006E85F1 /* CHCSVParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		370AAF2229C4FCDF00704074 /* Helvetica.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Helvetica.ttc; sourceTree = "<group>"; };
 		37794C3D29C38F8D00B23E8A /* CoreLocashun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreLocashun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37794C4029C38F8D00B23E8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37794C4229C38F8D00B23E8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,9 @@
 		37794C4929C38F8F00B23E8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37794C4C29C38F8F00B23E8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37794C4E29C38F8F00B23E8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37A2627429C92B48006E85F1 /* CoreLocashun-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreLocashun-Bridging-Header.h"; sourceTree = "<group>"; };
+		37A2627529C92B49006E85F1 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
+		37A2627629C92B49006E85F1 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37794C5629C490BF00B23E8A /* CSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,10 +67,14 @@
 				37794C4029C38F8D00B23E8A /* AppDelegate.swift */,
 				37794C4229C38F8D00B23E8A /* SceneDelegate.swift */,
 				37794C4429C38F8D00B23E8A /* ViewController.swift */,
+				37A2627629C92B49006E85F1 /* CHCSVParser.h */,
+				37A2627529C92B49006E85F1 /* CHCSVParser.m */,
 				37794C4629C38F8D00B23E8A /* Main.storyboard */,
 				37794C4929C38F8F00B23E8A /* Assets.xcassets */,
 				37794C4B29C38F8F00B23E8A /* LaunchScreen.storyboard */,
+				370AAF2229C4FCDF00704074 /* Helvetica.ttc */,
 				37794C4E29C38F8F00B23E8A /* Info.plist */,
+				37A2627429C92B48006E85F1 /* CoreLocashun-Bridging-Header.h */,
 			);
 			path = CoreLocashun;
 			sourceTree = "<group>";
@@ -83,6 +95,9 @@
 			dependencies = (
 			);
 			name = CoreLocashun;
+			packageProductDependencies = (
+				37794C5529C490BF00B23E8A /* CSV */,
+			);
 			productName = CoreLocashun;
 			productReference = 37794C3D29C38F8D00B23E8A /* CoreLocashun.app */;
 			productType = "com.apple.product-type.application";
@@ -99,6 +114,7 @@
 				TargetAttributes = {
 					37794C3C29C38F8D00B23E8A = {
 						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
 					};
 				};
 			};
@@ -111,6 +127,9 @@
 				Base,
 			);
 			mainGroup = 37794C3429C38F8D00B23E8A;
+			packageReferences = (
+				37794C5429C490BF00B23E8A /* XCRemoteSwiftPackageReference "CSV.swift" */,
+			);
 			productRefGroup = 37794C3E29C38F8D00B23E8A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +147,7 @@
 				37794C4D29C38F8F00B23E8A /* LaunchScreen.storyboard in Resources */,
 				37794C4A29C38F8F00B23E8A /* Assets.xcassets in Resources */,
 				37794C4829C38F8D00B23E8A /* Main.storyboard in Resources */,
+				370AAF2329C4FCDF00704074 /* Helvetica.ttc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A2627729C92B49006E85F1 /* CHCSVParser.m in Sources */,
 				37794C4529C38F8D00B23E8A /* ViewController.swift in Sources */,
 				37794C4129C38F8D00B23E8A /* AppDelegate.swift in Sources */,
 				37794C4329C38F8D00B23E8A /* SceneDelegate.swift in Sources */,
@@ -285,16 +306,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZV83F2R479;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoreLocashun/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to conduct aerial surveys.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to conduct aerial surveys.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +328,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.fau.dzimmerman.CoreLocashun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CoreLocashun/CoreLocashun-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -313,16 +340,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZV83F2R479;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoreLocashun/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to conduct aerial surveys.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to conduct aerial surveys.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,6 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.fau.dzimmerman.CoreLocashun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CoreLocashun/CoreLocashun-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -358,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		37794C5429C490BF00B23E8A /* XCRemoteSwiftPackageReference "CSV.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yaslab/CSV.swift.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		37794C5529C490BF00B23E8A /* CSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37794C5429C490BF00B23E8A /* XCRemoteSwiftPackageReference "CSV.swift" */;
+			productName = CSV;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 37794C3529C38F8D00B23E8A /* Project object */;
 }
