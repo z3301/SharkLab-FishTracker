@@ -12,7 +12,7 @@ import CSV
 import SwiftUI
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
-    
+
     // console
     @IBOutlet weak var longitude: UILabel!
     @IBOutlet weak var latitude: UILabel!
@@ -54,11 +54,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var today = ""
     var now = ""
     
-    
+    var models:[(title: String, note: String)] = []
+
     // viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setupLocationManager()
+        
+    }
+    
+    @IBAction func didTapNewNoe(){
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "new") as? EntryViewController else {
+            return
+        }
+        vc.title = "New Note"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        vc.completion = { noteTitle, note in
+            self.navigationController?.popToRootViewController(animated: true)
+            self.models.append((title: noteTitle, note: note))
+            self.arrOfData.append([self.today,self.now,self.lat,self.long,"","","","","","","","","","","",note])
+        }
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func startStopTapped(_ sender: Any)
@@ -245,6 +262,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         date = Date()
         today = date.formatted(date: .numeric, time: .omitted)
         now = date.formatted(date: .omitted, time: .complete)
+        
         arrOfData.append([today,now,lat,long,"","","","1","","","","","","","",""])
     }
     
@@ -311,19 +329,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         arrOfData.append([today,now,lat,long,"","","","","","","","","","","1",""])
     }
     
-    @IBAction func addNote(_ sender: Any) {
-        lat = latitude.text
-        long = longitude.text
-        date = Date()
-        today = date.formatted(date: .numeric, time: .omitted)
-        now = date.formatted(date: .omitted, time: .complete)
-        arrOfData.append([today,now,lat,long,"","","","","","","","","","","","1"])
-    }
-    
-    
-    
-    
-    
-    
-    
+//    @IBAction func addNote(_ sender: Any) {
+//        lat = latitude.text
+//        long = longitude.text
+//        date = Date()
+//        today = date.formatted(date: .numeric, time: .omitted)
+//        now = date.formatted(date: .omitted, time: .complete)
+//        arrOfData.append([today,now,lat,long,"","","","","","","","","","","","1"])
+//    }
+
 }
