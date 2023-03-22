@@ -40,15 +40,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func startStopTapped(_ sender: Any)
     {
-        if(timerCounting)
-        {
-            timerCounting = false
-            timer.invalidate()
-            //            startStopButton.setTitle("Start", for: .normal)
-            //            startStopButton.setTitleColor(UIColor.white, for: .normal)
-        }
-        else
-        {
+//        if(timerCounting)
+//        {
+//            timerCounting = false
+//            timer.invalidate()
+//            //            startStopButton.setTitle("Start", for: .normal)
+//            //            startStopButton.setTitleColor(UIColor.white, for: .normal)
+//        }
+//        else
+//        {
             timerCounting = true
             //            startStopButton.setTitle("Pause", for: .normal)
             //            startStopButton.setTitleColor(UIColor.red, for: .normal)
@@ -56,7 +56,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
             // csv vars
             let now = Date()
-            let fileName = now.formatted(Date.ISO8601FormatStyle().dateSeparator(.dash))
+        let fileName = now.formatted(Date.ISO8601FormatStyle().dateSeparator(.omitted).timeSeparator(.omitted))
             sFileName = "\(fileName).csv"
             documentDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
             documentURL = URL(fileURLWithPath: documentDirectoryPath).appendingPathComponent(sFileName)
@@ -81,7 +81,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 csvWriter?.writeField("NOTES")
                 csvWriter?.finishLine()
         }
-    }
+//    }
     
     @IBAction func resetTapped(_ sender: Any)
     {
