@@ -58,6 +58,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Fishing Boat" buttonSize="large">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addFishingBoat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tUq-II-NWc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="h9K-Ts-gnU">
                                 <rect key="frame" x="261" y="221" width="222" height="132"/>
@@ -66,6 +69,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Sailboat" buttonSize="large">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addSailboat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CQw-Zh-hGg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="mhg-Rc-3iU" userLabel="Power Boat Button">
                                 <rect key="frame" x="503" y="221" width="221" height="132"/>
@@ -74,6 +80,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Power Boat" buttonSize="large">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addPowerBoat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="29E-Rh-zcy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqp-GY-8P3">
                                 <rect key="frame" x="20" y="373" width="704" height="132"/>
@@ -82,6 +91,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Tarpon" buttonSize="large">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addTarpon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zkz-58-Qdj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ah-PE-6qR">
                                 <rect key="frame" x="22" y="525" width="342" height="132"/>
@@ -90,6 +102,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Shark" buttonSize="large">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addShark:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zZk-AU-SUb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCR-yi-Rp4">
                                 <rect key="frame" x="382" y="525" width="342" height="132"/>
@@ -98,6 +113,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Nurse Shark" buttonSize="large">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addNurseShark:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mNZ-JC-jbA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbx-UN-WBn">
                                 <rect key="frame" x="22" y="677" width="342" height="132"/>
@@ -106,6 +124,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Eagle Ray" buttonSize="large">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addEagleRay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4rr-5X-3iX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LzP-dY-sd0">
                                 <rect key="frame" x="382" y="677" width="342" height="132"/>
@@ -114,6 +135,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Stingray" buttonSize="large">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addStingray:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GkC-Qv-hWy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btn-b9-VeF">
                                 <rect key="frame" x="22" y="829" width="342" height="132"/>
@@ -122,6 +146,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Dolphin" buttonSize="large">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addDolphin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Do0-Sw-w3k"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9H-UQ-gor">
                                 <rect key="frame" x="382" y="829" width="342" height="132"/>
@@ -130,6 +157,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Turtle" buttonSize="large">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addTurtle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ewZ-zg-Xpl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwz-IJ-OJI">
                                 <rect key="frame" x="22" y="981" width="342" height="132"/>
@@ -138,6 +168,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Fish School" buttonSize="large">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addFishSchool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xFf-uQ-abM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azc-XS-FUR">
                                 <rect key="frame" x="382" y="981" width="342" height="132"/>
@@ -147,6 +180,9 @@
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                     <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addNote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h3k-50-JqB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alh-ox-74s">
                                 <rect key="frame" x="232" y="69" width="281" height="67"/>

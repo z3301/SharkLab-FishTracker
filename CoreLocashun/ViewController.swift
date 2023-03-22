@@ -47,32 +47,38 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var csvWriter = CHCSVWriter.init(forWritingToCSVFile: "")
     var arrOfData = [[String]]()
     
+    //
+    var lat:String! = ""
+    var long:String! = ""
+    var date = Date()
+    var today = ""
+    var now = ""
+    
+    
     // viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        startStopButton.setTitleColor(UIColor.green, for: .normal)
         setupLocationManager()
     }
     
     @IBAction func startStopTapped(_ sender: Any)
     {
-//        if(timerCounting)
-//        {
-//            timerCounting = false
-//            timer.invalidate()
-//            //            startStopButton.setTitle("Start", for: .normal)
-//            //            startStopButton.setTitleColor(UIColor.white, for: .normal)
-//        }
-//        else
-//        {
+        // pause functionality
+        //        if(timerCounting)
+        //        {
+        //            timerCounting = false
+        //            timer.invalidate()
+        //            //            startStopButton.setTitle("Start", for: .normal)
+        //            //            startStopButton.setTitleColor(UIColor.white, for: .normal)
+        //        }
+        //        else
+        //        {
             timerCounting = true
-            //            startStopButton.setTitle("Pause", for: .normal)
-            //            startStopButton.setTitleColor(UIColor.red, for: .normal)
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
             
             // csv vars
             let now = Date()
-        let fileName = now.formatted(Date.ISO8601FormatStyle().dateSeparator(.omitted).timeSeparator(.omitted))
+            let fileName = now.formatted(Date.ISO8601FormatStyle().dateSeparator(.omitted).timeSeparator(.omitted))
             sFileName = "\(fileName).csv"
             documentDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
             documentURL = URL(fileURLWithPath: documentDirectoryPath).appendingPathComponent(sFileName)
@@ -140,8 +146,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.count = 0
             self.timer.invalidate()
             self.timerDisplay.text = self.makeTimeString(hours: 0, minutes: 0, seconds: 0)
-            //            self.startStopButton.setTitle("Start", for: .normal)
-            //            self.startStopButton.setTitleColor(UIColor.white, for: .normal)
         }))
         
         self.present(alert, animated: true, completion: nil)
@@ -156,53 +160,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         timerDisplay.text = timeString
         
         // vars
-        let lat:String! = latitude.text
-        let long:String! = longitude.text
+        lat = latitude.text
+        long = longitude.text
+        date = Date()
+        today = date.formatted(date: .numeric, time: .omitted)
+        now = date.formatted(date: .omitted, time: .complete)
 
-        let date = Date()
-        let today = date.formatted(date: .numeric, time: .omitted)
-        let now = date.formatted(date: .omitted, time: .complete)
-
-        
-        
-        
-        // csv code
-        func buttonClicked(sender: UIButton) {
-            switch sender {
-            case fishingBoatButton: arrOfData.append([today,now,lat,long,"1","","","","","","","","","","",""])
-                break;
-            case sailboatButton: arrOfData.append([today,now,lat,long,"","1","","","","","","","","","",""])
-                break;
-            case powerBoatButton: arrOfData.append([today,now,lat,long,"","","1","","","","","","","","",""])
-                break;
-            case tarponButton: arrOfData.append([today,now,lat,long,"","","","1","","","","","","","",""])
-                break;
-            case sharkButton: arrOfData.append([today,now,lat,long,"","","","","1","","","","","","",""])
-                break;
-            case nurseSharkButton: arrOfData.append([today,now,lat,long,"","","","","","1","","","","","",""])
-                break;
-            case eagleRayButton: arrOfData.append([today,now,lat,long,"","","","","","","1","","","","",""])
-                break;
-            case stingrayButton: arrOfData.append([today,now,lat,long,"","","","","","","","1","","","",""])
-                break;
-            case dolphinButton: arrOfData.append([today,now,lat,long,"","","","","","","","","1","","",""])
-                break;
-            case turtleButton: arrOfData.append([today,now,lat,long,"","","","","","","","","","1","",""])
-                break;
-            case fishSchoolButton: arrOfData.append([today,now,lat,long,"","","","","","","","","","","1",""])
-                break;
-            case notesButton: arrOfData.append([today,now,lat,long,"","","","","","","","","","","","1"])
-                break;
-            default: arrOfData.append([today,now,lat,long,"","","","","","","","","","","",""])
-                break;
-            }
-        }
-        
-        
-        
-        
-        
-     
+        // blank row
+        arrOfData.append([today,now,lat,long,"","","","","","","","","","","",""])
     }
     
     func secondsToHoursMinutesSeconds(seconds: Int) -> (Int, Int, Int)
@@ -223,7 +188,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
 
     let locationManager = CLLocationManager()
-    var now = Date()
 
     func setupLocationManager() {
         locationManager.delegate = self
@@ -234,8 +198,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
-            //            if location.horizontalAccuracy > 0 {
-            //                locationManager.stopUpdatingLocation()
             let longitude1 = location.coordinate.longitude
             let latitude1 = location.coordinate.latitude
             
@@ -249,5 +211,119 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Location update failed, \(error)")
     }
+    
+    @IBAction func addFishingBoat(_ sender: Any) {
+        lat = latitude.text
+        long = longitude.text
+        date = Date()
+        today = date.formatted(date: .numeric, time: .omitted)
+        now = date.formatted(date: .omitted, time: .complete)
+        arrOfData.append([today,now,lat,long,"1","","","","","","","","","","",""])
+    }
+    
+    @IBAction func addSailboat(_ sender: Any) {
+        lat = latitude.text
+        long = longitude.text
+        date = Date()
+        today = date.formatted(date: .numeric, time: .omitted)
+        now = date.formatted(date: .omitted, time: .complete)
+        arrOfData.append([today,now,lat,long,"","1","","","","","","","","","",""])
+    }
+    
+    @IBAction func addPowerBoat(_ sender: Any) {
+        lat = latitude.text
+        long = longitude.text
+        date = Date()
+        today = date.formatted(date: .numeric, time: .omitted)
+        now = date.formatted(date: .omitted, time: .complete)
+        arrOfData.append([today,now,lat,long,"","","1","","","","","","","","",""])
+    }
+    
+    @IBAction func addTarpon(_ sender: Any) {
+        lat = latitude.text
+        long = longitude.text
+        date = Date()
+        today = date.formatted(date: .numeric, time: .omitted)
+        now = date.formatted(date: .omitted, time: .complete)
+        arrOfData.append([today,now,lat,long,"","","","1","","","","","","","",""])
+    }
+    
+    @IBAction func addShark(_ sender: Any) {
+        lat = latitude.text
+        long = longitude.text
+        date = Date()
+        today = date.formatted(date: .numeric, time: .omitted)
+        now = date.formatted(date: .omitted, time: .complete)
+        arrOfData.append([today,now,lat,long,"","","","","1","","","","","","",""])
+    }
+    
+    @IBAction func addNurseShark(_ sender: Any) {
+        lat = latitude.text
+        long = longitude.text
+        date = Date()
+        today = date.formatted(date: .numeric, time: .omitted)
+        now = date.formatted(date: .omitted, time: .complete)
+        arrOfData.append([today,now,lat,long,"","","","","","1","","","","","",""])
+    }
+    
+    @IBAction func addEagleRay(_ sender: Any) {
+        lat = latitude.text
+        long = longitude.text
+        date = Date()
+        today = date.formatted(date: .numeric, time: .omitted)
+        now = date.formatted(date: .omitted, time: .complete)
+        arrOfData.append([today,now,lat,long,"","","","","","","1","","","","",""])
+    }
+    
+    @IBAction func addStingray(_ sender: Any) {
+        lat = latitude.text
+        long = longitude.text
+        date = Date()
+        today = date.formatted(date: .numeric, time: .omitted)
+        now = date.formatted(date: .omitted, time: .complete)
+        arrOfData.append([today,now,lat,long,"","","","","","","","1","","","",""])
+    }
+    
+    @IBAction func addDolphin(_ sender: Any) {
+        lat = latitude.text
+        long = longitude.text
+        date = Date()
+        today = date.formatted(date: .numeric, time: .omitted)
+        now = date.formatted(date: .omitted, time: .complete)
+        arrOfData.append([today,now,lat,long,"","","","","","","","","1","","",""])
+    }
+    
+    @IBAction func addTurtle(_ sender: Any) {
+        lat = latitude.text
+        long = longitude.text
+        date = Date()
+        today = date.formatted(date: .numeric, time: .omitted)
+        now = date.formatted(date: .omitted, time: .complete)
+        arrOfData.append([today,now,lat,long,"","","","","","","","","","1","",""])
+    }
+    
+    @IBAction func addFishSchool(_ sender: Any) {
+        lat = latitude.text
+        long = longitude.text
+        date = Date()
+        today = date.formatted(date: .numeric, time: .omitted)
+        now = date.formatted(date: .omitted, time: .complete)
+        arrOfData.append([today,now,lat,long,"","","","","","","","","","","1",""])
+    }
+    
+    @IBAction func addNote(_ sender: Any) {
+        lat = latitude.text
+        long = longitude.text
+        date = Date()
+        today = date.formatted(date: .numeric, time: .omitted)
+        now = date.formatted(date: .omitted, time: .complete)
+        arrOfData.append([today,now,lat,long,"","","","","","","","","","","","1"])
+    }
+    
+    
+    
+    
+    
+    
     
 }
