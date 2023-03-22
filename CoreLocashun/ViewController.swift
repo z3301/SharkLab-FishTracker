@@ -13,18 +13,33 @@ import SwiftUI
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
+    // console
     @IBOutlet weak var longitude: UILabel!
     @IBOutlet weak var latitude: UILabel!
     @IBOutlet weak var timerDisplay: UILabel!
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var startStopButton: UIButton!
     
+    // buttons
+    @IBOutlet weak var fishingBoatButton: UIButton!
+    @IBOutlet weak var sailboatButton: UIButton!
+    @IBOutlet weak var powerBoatButton: UIButton!
+    @IBOutlet weak var tarponButton: UIButton!
+    @IBOutlet weak var sharkButton: UIButton!
+    @IBOutlet weak var nurseSharkButton: UIButton!
+    @IBOutlet weak var eagleRayButton: UIButton!
+    @IBOutlet weak var stingrayButton: UIButton!
+    @IBOutlet weak var dolphinButton: UIButton!
+    @IBOutlet weak var turtleButton: UIButton!
+    @IBOutlet weak var fishSchoolButton: UIButton!
+    @IBOutlet weak var notesButton: UIButton!
+    
+    // timer vars
     var timer:Timer = Timer()
     var count:Int = 0
     var timerCounting:Bool = false
     
-    
-    
+    // csv vars
     var sFileName:String = ""
     var documentDirectoryPath:String = ""
     var documentURL:URL = URL(fileURLWithPath: "")
@@ -32,6 +47,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var csvWriter = CHCSVWriter.init(forWritingToCSVFile: "")
     var arrOfData = [[String]]()
     
+    // viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         //        startStopButton.setTitleColor(UIColor.green, for: .normal)
@@ -147,8 +163,44 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let today = date.formatted(date: .numeric, time: .omitted)
         let now = date.formatted(date: .omitted, time: .complete)
 
+        
+        
+        
         // csv code
-        arrOfData.append([today,now,lat,long,"","","","","","","","","","","",""])
+        func buttonClicked(sender: UIButton) {
+            switch sender {
+            case fishingBoatButton: arrOfData.append([today,now,lat,long,"1","","","","","","","","","","",""])
+                break;
+            case sailboatButton: arrOfData.append([today,now,lat,long,"","1","","","","","","","","","",""])
+                break;
+            case powerBoatButton: arrOfData.append([today,now,lat,long,"","","1","","","","","","","","",""])
+                break;
+            case tarponButton: arrOfData.append([today,now,lat,long,"","","","1","","","","","","","",""])
+                break;
+            case sharkButton: arrOfData.append([today,now,lat,long,"","","","","1","","","","","","",""])
+                break;
+            case nurseSharkButton: arrOfData.append([today,now,lat,long,"","","","","","1","","","","","",""])
+                break;
+            case eagleRayButton: arrOfData.append([today,now,lat,long,"","","","","","","1","","","","",""])
+                break;
+            case stingrayButton: arrOfData.append([today,now,lat,long,"","","","","","","","1","","","",""])
+                break;
+            case dolphinButton: arrOfData.append([today,now,lat,long,"","","","","","","","","1","","",""])
+                break;
+            case turtleButton: arrOfData.append([today,now,lat,long,"","","","","","","","","","1","",""])
+                break;
+            case fishSchoolButton: arrOfData.append([today,now,lat,long,"","","","","","","","","","","1",""])
+                break;
+            case notesButton: arrOfData.append([today,now,lat,long,"","","","","","","","","","","","1"])
+                break;
+            default: arrOfData.append([today,now,lat,long,"","","","","","","","","","","",""])
+                break;
+            }
+        }
+        
+        
+        
+        
         
      
     }

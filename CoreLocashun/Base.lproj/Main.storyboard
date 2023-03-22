@@ -59,19 +59,19 @@
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="mhg-Rc-3iU">
-                                <rect key="frame" x="503" y="221" width="221" height="132"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Power Boat" buttonSize="large">
-                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
-                                </buttonConfiguration>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="h9K-Ts-gnU">
                                 <rect key="frame" x="261" y="221" width="222" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sailboat" buttonSize="large">
+                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="mhg-Rc-3iU" userLabel="Power Boat Button">
+                                <rect key="frame" x="503" y="221" width="221" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Power Boat" buttonSize="large">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                 </buttonConfiguration>
                             </button>
@@ -188,11 +188,23 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="dolphinButton" destination="Btn-b9-VeF" id="Nse-cS-X0o"/>
+                        <outlet property="eagleRayButton" destination="Kbx-UN-WBn" id="dqL-46-1Wh"/>
+                        <outlet property="fishSchoolButton" destination="jwz-IJ-OJI" id="vtP-Jb-D2o"/>
+                        <outlet property="fishingBoatButton" destination="0M7-CO-weD" id="nWL-2q-3Iy"/>
                         <outlet property="latitude" destination="saB-vZ-Wzo" id="JGd-3J-9JV"/>
                         <outlet property="longitude" destination="pHP-J8-rAg" id="tlX-3k-42c"/>
+                        <outlet property="notesButton" destination="Azc-XS-FUR" id="WJK-Ep-ee3"/>
+                        <outlet property="nurseSharkButton" destination="zCR-yi-Rp4" id="umQ-0Z-eF2"/>
+                        <outlet property="powerBoatButton" destination="mhg-Rc-3iU" id="2gy-Ot-Udr"/>
                         <outlet property="resetButton" destination="Hz3-DZ-P5i" id="Nj2-U8-7Pi"/>
+                        <outlet property="sailboatButton" destination="h9K-Ts-gnU" id="hia-qB-adr"/>
+                        <outlet property="sharkButton" destination="1ah-PE-6qR" id="n5I-zr-Tw9"/>
                         <outlet property="startStopButton" destination="bgo-Yn-RCu" id="tcB-qW-8rE"/>
+                        <outlet property="stingrayButton" destination="LzP-dY-sd0" id="eS2-0Z-Lc0"/>
+                        <outlet property="tarponButton" destination="eqp-GY-8P3" id="CXm-DU-11K"/>
                         <outlet property="timerDisplay" destination="Alh-ox-74s" id="n45-E3-eCU"/>
+                        <outlet property="turtleButton" destination="D9H-UQ-gor" id="lfe-f3-aAL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
