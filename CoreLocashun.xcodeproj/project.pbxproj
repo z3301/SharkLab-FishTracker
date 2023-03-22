@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		370AAF2329C4FCDF00704074 /* Helvetica.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 370AAF2229C4FCDF00704074 /* Helvetica.ttc */; };
+		37595AEE29CB63FE00814E3E /* TarponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37595AED29CB63FE00814E3E /* TarponViewController.swift */; };
 		37794C4129C38F8D00B23E8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37794C4029C38F8D00B23E8A /* AppDelegate.swift */; };
 		37794C4329C38F8D00B23E8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37794C4229C38F8D00B23E8A /* SceneDelegate.swift */; };
 		37794C4529C38F8D00B23E8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37794C4429C38F8D00B23E8A /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		370AAF2229C4FCDF00704074 /* Helvetica.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Helvetica.ttc; sourceTree = "<group>"; };
+		37595AED29CB63FE00814E3E /* TarponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarponViewController.swift; sourceTree = "<group>"; };
 		37794C3D29C38F8D00B23E8A /* CoreLocashun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreLocashun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37794C4029C38F8D00B23E8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37794C4229C38F8D00B23E8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				37794C4E29C38F8F00B23E8A /* Info.plist */,
 				37A2627429C92B48006E85F1 /* CoreLocashun-Bridging-Header.h */,
 				37A2627829CB3A31006E85F1 /* EntryViewController.swift */,
+				37595AED29CB63FE00814E3E /* TarponViewController.swift */,
 			);
 			path = CoreLocashun;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			files = (
 				37A2627729C92B49006E85F1 /* CHCSVParser.m in Sources */,
 				37A2627929CB3A31006E85F1 /* EntryViewController.swift in Sources */,
+				37595AEE29CB63FE00814E3E /* TarponViewController.swift in Sources */,
 				37794C4529C38F8D00B23E8A /* ViewController.swift in Sources */,
 				37794C4129C38F8D00B23E8A /* AppDelegate.swift in Sources */,
 				37794C4329C38F8D00B23E8A /* SceneDelegate.swift in Sources */,
