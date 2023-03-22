@@ -55,7 +55,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
             
             // csv vars
-            sFileName = "test.csv"
+            let now = Date()
+            let fileName = now.formatted(Date.ISO8601FormatStyle().dateSeparator(.dash))
+            sFileName = "\(fileName).csv"
             documentDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
             documentURL = URL(fileURLWithPath: documentDirectoryPath).appendingPathComponent(sFileName)
             output = OutputStream.toMemory()
