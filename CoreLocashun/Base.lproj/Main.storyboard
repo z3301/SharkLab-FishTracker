@@ -109,15 +109,15 @@
                                     <action selector="addShark:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zZk-AU-SUb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCR-yi-Rp4">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCR-yi-Rp4" userLabel="Manatee Button">
                                 <rect key="frame" x="382" y="525" width="342" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Nurse Shark" buttonSize="large">
+                                <buttonConfiguration key="configuration" style="filled" title="Manatee" buttonSize="large">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="addNurseShark:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mNZ-JC-jbA"/>
+                                    <action selector="addManatee:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7QT-u0-mT5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbx-UN-WBn">
@@ -209,14 +209,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHP-J8-rAg">
-                                <rect key="frame" x="357" y="168" width="156" height="21"/>
+                                <rect key="frame" x="357" y="168" width="126" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saB-vZ-Wzo">
-                                <rect key="frame" x="357" y="144" width="156" height="21"/>
+                                <rect key="frame" x="357" y="144" width="126" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -236,7 +236,7 @@
                         <outlet property="fishingBoatButton" destination="0M7-CO-weD" id="nWL-2q-3Iy"/>
                         <outlet property="latitude" destination="saB-vZ-Wzo" id="JGd-3J-9JV"/>
                         <outlet property="longitude" destination="pHP-J8-rAg" id="tlX-3k-42c"/>
-                        <outlet property="nurseSharkButton" destination="zCR-yi-Rp4" id="umQ-0Z-eF2"/>
+                        <outlet property="manateeButton" destination="zCR-yi-Rp4" id="BWS-YK-3t5"/>
                         <outlet property="powerBoatButton" destination="mhg-Rc-3iU" id="2gy-Ot-Udr"/>
                         <outlet property="resetButton" destination="Hz3-DZ-P5i" id="Nj2-U8-7Pi"/>
                         <outlet property="sailboatButton" destination="h9K-Ts-gnU" id="hia-qB-adr"/>
@@ -249,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1232" y="29"/>
+            <point key="canvasLocation" x="1231.4516129032259" y="28.861429832303617"/>
         </scene>
         <!--Entry View Controller-->
         <scene sceneID="Poa-WL-4HL">

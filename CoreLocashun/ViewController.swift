@@ -26,7 +26,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var powerBoatButton: UIButton!
 //    @IBOutlet weak var tarponButton: UIButton!
     @IBOutlet weak var sharkButton: UIButton!
-    @IBOutlet weak var nurseSharkButton: UIButton!
+    @IBOutlet weak var manateeButton: UIButton!
     @IBOutlet weak var eagleRayButton: UIButton!
     @IBOutlet weak var stingrayButton: UIButton!
     @IBOutlet weak var dolphinButton: UIButton!
@@ -96,22 +96,35 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func startStopTapped(_ sender: Any)
     {
+        startStopButton.isEnabled = false
         // pause functionality
-        //        if(timerCounting)
-        //        {
-        //            timerCounting = false
-        //            timer.invalidate()
-        //            //            startStopButton.setTitle("Start", for: .normal)
-        //            //            startStopButton.setTitleColor(UIColor.white, for: .normal)
-        //        }
-        //        else
-        //        {
+        if(timerCounting)
+        {
+            // do nothing
+            //            startStopButton.setAttributedTitle("Paused", for: .normal)
+            //            startStopButton.setTitleColor(UIColor.gray, for: .normal)
+                                    
+            //            let alert = UIAlertController(title: "Timer Paused", message: "The timer is currently paused. No time will be counted on the output file while the timer is paused.", preferredStyle: .alert)
+            //
+            //                timerCounting = false
+            //                timer.invalidate()
+            //
+            //            alert.addAction(UIAlertAction(title: "Continue Timer", style: .cancel, handler: { (_) in
+            //                self.timerCounting = true
+            //                self.timer.fire()
+            //
+            //            }))
+            //            self.present(alert, animated: true, completion: nil)
+                        
+        }
+        else
+        {
             timerCounting = true
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
             
             // csv vars
             let now = Date()
-        let fileName = now.formatted(Date.ISO8601FormatStyle().dateSeparator(.omitted).time(includingFractionalSeconds: true).timeSeparator(.omitted))
+            let fileName = now.formatted(Date.ISO8601FormatStyle().dateSeparator(.omitted).time(includingFractionalSeconds: true).timeSeparator(.omitted))
             sFileName = "\(fileName).csv"
             documentDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
             documentURL = URL(fileURLWithPath: documentDirectoryPath).appendingPathComponent(sFileName)
@@ -127,7 +140,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 csvWriter?.writeField("POWERBOAT")
                 csvWriter?.writeField("TARPON")
                 csvWriter?.writeField("SHARK")
-                csvWriter?.writeField("NURSE SHARK")
+                csvWriter?.writeField("MANATEE")
                 csvWriter?.writeField("EAGLE RAY")
                 csvWriter?.writeField("STINGRAY")
                 csvWriter?.writeField("DOLPHIN")
@@ -136,7 +149,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 csvWriter?.writeField("NOTES")
                 csvWriter?.finishLine()
         }
-//    }
+    }
     
     @IBAction func resetTapped(_ sender: Any)
     {
@@ -158,7 +171,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 self.csvWriter?.writeField(elements.element[6]) // POWER BOAT
                 self.csvWriter?.writeField(elements.element[7]) // TARPON
                 self.csvWriter?.writeField(elements.element[8]) // SHARK
-                self.csvWriter?.writeField(elements.element[9]) // NURSE SHARK
+                self.csvWriter?.writeField(elements.element[9]) // MANATEE
                 self.csvWriter?.writeField(elements.element[10]) // EAGLE RAY
                 self.csvWriter?.writeField(elements.element[11]) // STINGRAY
                 self.csvWriter?.writeField(elements.element[12]) // DOLPHIN
@@ -176,6 +189,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             }
             
             // reset the display
+            self.startStopButton.isEnabled = true
+            self.timerCounting = false
             self.count = 0
             self.timer.invalidate()
             self.timerDisplay.text = self.makeTimeString(hours: 0, minutes: 0, seconds: 0)
@@ -291,7 +306,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         arrOfData.append([today,now,lat,long,"","","","","1","","","","","","",""])
     }
     
-    @IBAction func addNurseShark(_ sender: Any) {
+    @IBAction func addManatee(_ sender: Any) {
         lat = latitude.text
         long = longitude.text
         date = Date()
